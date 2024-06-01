@@ -1,0 +1,67 @@
+﻿Ficha Técnica do Projeto “Cicloviajes”
+1. Objetivo:
+Realizar uma análise exploratória de dados para gerar um relatório com métricas e insights sobre o uso de um programa de compartilhamento de bicicletas, utilizando dados do Citi Bike de Nova York.
+2. Conjunto de Dados:
+* Fonte: NYC Citi Bike Trips (Google BigQuery)
+* Amostra: 50.000 registros em um arquivo .CSV
+* Principais Variáveis:
+   * tripduration: duração da viagem (em segundos)
+   * starttime: início da viagem (timestamp)
+   * stoptime: fim da viagem (timestamp)
+   * start station id: ID da estação de início
+   * start station name: nome da estação de início
+   * start station latitude: latitude da estação de início
+   * start station longitude: longitude da estação de início
+   * end station id: ID da estação de fim
+   * end station name: nome da estação de fim
+   * end station latitude: latitude da estação de fim
+   * end station longitude: longitude da estação de fim
+   * bikeid: ID da bicicleta
+   * usertype: tipo de usuário (Cliente ou Assinante)
+   * birth year: ano de nascimento do usuário
+   * gender: gênero do usuário
+Passo a Passo para o Projeto
+1. Carregamento e Preparação dos Dados:
+* Ferramenta: Python (bibliotecas pandas, numpy, matplotlib, seaborn)
+* Passos:
+   1. Importar as bibliotecas necessárias.
+   2. Carregar os dados do arquivo .CSV ou Google BigQuery.
+   3. Explorar a estrutura dos dados (verificar colunas, tipos de dados, valores ausentes).
+   4. Converter tripduration de segundos para minutos.
+   5. Simplificar a variável starttime extraindo a data..info())
+2. Análise Descritiva:
+* Métricas para um dia normal:
+   * Número de viagens realizadas em média por dia.
+   * Máximo, mínimo, média e desvio padrão da duração da viagem.
+* Métricas históricas:
+   * Total de viagens.
+   * Crescimento no número de viagens diárias ao longo do tempo.
+   * Total de viagens por sexo, idade e tipo de assinatura.
+3. Visualizações:
+* Utilizar bibliotecas de visualização (matplotlib, seaborn) para criar gráficos relevantes.
+()
+4. Criação do Dashboard:
+* Ferramentas: Looker Studio, Power BI, Tableau
+* Passos Gerais:
+   1. Importar os Dados:
+      * Conectar à fonte de dados (CSV ou BigQuery).
+   2. Criar Visualizações:
+      * Utilizar gráficos de linha para o crescimento diário de viagens.
+      * Gráficos de barra para visualizações por gênero, idade e tipo de assinatura.
+   3. Montar o Dashboard:
+      * Organizar as visualizações em uma ou mais páginas.
+      * Incluir filtros interativos (por exemplo, por data, tipo de usuário).
+      * Adicionar títulos e descrições para facilitar a compreensão.
+   4. Publicar e Compartilhar:
+      * Publicar o dashboard e fornecer acesso à equipe ou CEO.
+Recomendações:
+* Baseando-se nas análises, fornecer recomendações estratégicas, como focar em campanhas de marketing para grupos demográficos específicos ou ajustar a distribuição de bicicletas conforme os padrões de uso observados.
+Conclusões Gerais e Padrões Descobertos:
+1. Padrões de Uso:
+   * Identificação de picos de uso em determinados períodos (por exemplo, fins de semana ou horários de pico).
+2. Demografia dos Usuários:
+   * Predominância de um gênero ou faixa etária entre os usuários.
+3. Duração das Viagens:
+   * Tendências nas durações das viagens que podem sugerir áreas de melhoria na eficiência do serviço.
+4. Crescimento ao Longo do Tempo:
+   * Crescimento sustentado no uso do serviço, indicando uma adoção crescente.
